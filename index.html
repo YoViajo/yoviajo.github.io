@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html>
 <body>
+    <!-- (A) HTML -->
+    <!-- (A1) ORIGINAL IMAGE -->
+    <h1>Original Image (300 X 277)</h1>
+    <img src="corgi.png"/>
 
-<h2>What Can JavaScript Do?</h2>
+    <!-- (A2) RESIZE USING CANVAS -->
+    <h1>Resized Image (50%)</h1>
+    <canvas id="resized"></canvas>
 
-<p id="demo">JavaScript can change HTML content.</p>
+    <!-- (B) JAVASCRIPT RESIZE -->
+    <script>
+    // (B1) NEW IMAGE OBJECT
+    var img = new Image();
 
-<button type="button" onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'>Click Me!</button>
+    // (B2) RESIZE ON IMAGE LOAD
+    img.onload = () => {
+      // NEW DIMENSIONS
+      let width = Math.floor(img.width * 0.5),
+          height = Math.floor(img.height * 0.5);
 
+      // DRAW ONTO CANVAS
+      let canvas = document.getElementById("resized"),
+          ctx = canvas.getContext("2d");
+      canvas.width = width;
+      canvas.height = height;
+      ctx.drawImage(img, 0, 0, width, height);
+    };
+
+    // (B3) GO!
+    img.src = "corgi.png";
+    </script>
 </body>
 </html>
