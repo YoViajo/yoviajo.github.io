@@ -1,12 +1,12 @@
-domain: example.com
-url: https://example.com
+domain: github.io
+url: https://yoviajo.github.io/
 baseurl: "/wind"
 
-title: Wind
-email: wind@example.com
-author: Wind Sample
+title: Portafolio Eric Armijo
+email: rcrmj@hotmail.com
+author: Eric Armijo
 
-lang: en
+lang: es
 
 plugins:
   - jekyll-seo-tag
@@ -16,6 +16,6 @@ color: "#13ccf9"
 #   shortname: example-com
 #
 rrss:
-  email: "example@example.cl"
+  email: "rcrmj@hotmail.com"
   telegram: "https://t.me/"
   discord: "https://discord.com/"
